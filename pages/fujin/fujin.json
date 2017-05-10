@@ -1,1 +1,6 @@
-{}
+{
+  "navigationBarTitleText":"吃啥-附近小吃",
+  "backgroundTextStyle":"dark",
+  "enablePullDownRefresh":true,
+  "disableScroll":true
+}
