@@ -1,0 +1,36 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/fujin/fujin",
+    "pages/me/me",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "吃啥",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath":"images/toolbar/home.png",
+        "selectedIconPath":"images/toolbar/home-click.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/fujin/fujin",
+        "iconPath": "images/toolbar/fujin.png",
+        "selectedIconPath": "images/toolbar/fujin-click.png",
+        "text": "附近"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "iconPath": "images/toolbar/me.png",
+        "selectedIconPath": "images/toolbar/me-click.png",
+        "text": "我"
+      }
+    ]
+  }
+}
