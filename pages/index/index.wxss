@@ -1,1 +1,21 @@
 /**index.wxss**/
+.item{
+  margin-left: 5px;
+  margin-right: 5px;
+  flex-direction:column;
+  background-color: white;
+}
+
+.item-top{
+  display: flex;
+}
+.item-top-right{
+  margin-left: 5px;
+}
+.desc{
+  color: #888888;
+  font-size: 28rpx;
+}
+.item-bottom{
+  display: flex;
+}

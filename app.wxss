@@ -8,3 +8,9 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+page {
+  font-family: -apple-system-font, "Helvetica Neue", sans-serif;
+  background-color: #F8F8F8;
+  font-size: 32rpx;
+  line-height: 1.6;
+}

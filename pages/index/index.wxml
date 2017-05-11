@@ -1,2 +1,40 @@
 <!--index.wxml-->
+<view class="item">
+  <view class="item-top">
+    <view class="item-top-left">
+      <image 
+style="width:80px;height:80px;"    src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3314349138,2807880508&fm=23&gp=0.jpg"></image>
+    </view>
 
+    <view class="item-top-right">
+      <view>
+        <text>周黑鸭</text>
+      </view>
+      <view class="desc">
+        <text>湖北周黑鸭管理有限公司[1]  是一家专业从事鸭类、鹅类、鸭副产品和素食产品等熟卤制品生产的品牌企业
+        </text>
+      </view>
+    </view>
+  </view>
+  <view class="item-bottom">
+    <view>
+      <image style="width:15px;height:15px;" src="/images/index/type.png"></image>
+      <text style="color:#a9a9a9;">12</text>
+    </view>
+
+    <view>
+      <image style="width:20px;height:10px;" src="/images/index/eye.png"></image>
+      <text style="color:#a9a9a9;">12</text>
+    </view>
+
+    <view>
+      <image style="width:20px;height:10px;" src="/images/index/eye.png"></image>
+      <text style="color:#a9a9a9;">12</text>
+    </view>
+
+    <view>
+      <image style="width:20px;height:10px;" src="/images/index/eye.png"></image>
+      <text style="color:#a9a9a9;">12</text>
+    </view>
+  </view>
+</view>
