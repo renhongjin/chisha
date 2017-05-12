@@ -1,22 +1,23 @@
 {
-  "pages":[
-    "pages/index/index",
+  "pages": [
     "pages/fujin/fujin",
+    "pages/index/index",
     "pages/me/me",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/detail/detail"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "吃啥",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "list": [
       {
         "pagePath": "pages/index/index",
-        "iconPath":"images/toolbar/home.png",
-        "selectedIconPath":"images/toolbar/home-click.png",
+        "iconPath": "images/toolbar/home.png",
+        "selectedIconPath": "images/toolbar/home-click.png",
         "text": "首页"
       },
       {
