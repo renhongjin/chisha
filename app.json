@@ -1,7 +1,7 @@
 {
   "pages": [
+  "pages/index/index",
     "pages/fujin/fujin",
-    "pages/index/index",
     "pages/me/me",
     "pages/logs/logs",
     "pages/detail/detail"

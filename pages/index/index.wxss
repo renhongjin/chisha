@@ -2,6 +2,7 @@
 .item{
   margin-left: 5px;
   margin-right: 5px;
+  margin-top:10px;
   flex-direction:column;
   background-color: white;
 }
@@ -18,4 +19,18 @@
 }
 .item-bottom{
   display: flex;
+}
+.item-bottom-simple{
+  width: 110px;
+  text-align: center;
+  line-height: 20px;
+}
+.simple-desc{
+  color:#a9a9a9;
+  font-size:14px;
+  margin-left:4px;
+  height:20px;
+}
+.moreShopInfo{
+  margin-top: 10px;
 }

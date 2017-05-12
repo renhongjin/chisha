@@ -45,7 +45,7 @@ Page({
   markertap(e) {
     //跳转到指定页面
     wx.navigateTo({
-      url:"/pages/detail/detail?query=123456"
+      url:"/pages/detail/detail?shopId="
     })
   },
   /**

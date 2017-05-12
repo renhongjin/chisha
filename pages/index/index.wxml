@@ -1,40 +1,41 @@
 <!--index.wxml-->
-<view class="item">
-  <view class="item-top">
-    <view class="item-top-left">
-      <image 
-style="width:80px;height:80px;"    src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3314349138,2807880508&fm=23&gp=0.jpg"></image>
-    </view>
-
-    <view class="item-top-right">
-      <view>
-        <text>周黑鸭</text>
+<block wx:for="{{shops}}" wx:for-item="shop">
+  <view id="{{shop.id}}" class="item" bindtap="shopDetail">
+    <view class="item-top">
+      <view class="item-top-left">
+        <image style="width:80px;height:80px;" src="{{shop.logoUrl}}"></image>
       </view>
-      <view class="desc">
-        <text>湖北周黑鸭管理有限公司[1]  是一家专业从事鸭类、鹅类、鸭副产品和素食产品等熟卤制品生产的品牌企业
-        </text>
+
+      <view class="item-top-right">
+        <view>
+          <text>{{shop.name}}</text>
+        </view>
+        <view class="desc">
+          <text>{{shop.desc}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="item-bottom">
+      <view class="item-bottom-simple">
+        <image style="width:20px;height:20px;" src="/images/index/type.png"></image>
+        <text class="simple-desc">{{shop.type}}</text>
+      </view>
+
+      <view class="item-bottom-simple">
+        <image style="width:20px;height:20px;" src="/images/index/map.png"></image>
+        <text class="simple-desc">{{shop.distance}}</text>
+      </view>
+
+      <view class="item-bottom-simple">
+        <image style="width:20px;height:20px;" src="/images/index/chat.png"></image>
+        <text class="simple-desc">{{shop.comment}}</text>
+      </view>
+
+      <view class="item-bottom-simple">
+        <image style="width:20px;height:20px;" src="/images/index/eye.png"></image>
+        <text class="simple-desc">{{shop.see}}</text>
       </view>
     </view>
   </view>
-  <view class="item-bottom">
-    <view>
-      <image style="width:15px;height:15px;" src="/images/index/type.png"></image>
-      <text style="color:#a9a9a9;">12</text>
-    </view>
-
-    <view>
-      <image style="width:20px;height:10px;" src="/images/index/eye.png"></image>
-      <text style="color:#a9a9a9;">12</text>
-    </view>
-
-    <view>
-      <image style="width:20px;height:10px;" src="/images/index/eye.png"></image>
-      <text style="color:#a9a9a9;">12</text>
-    </view>
-
-    <view>
-      <image style="width:20px;height:10px;" src="/images/index/eye.png"></image>
-      <text style="color:#a9a9a9;">12</text>
-    </view>
-  </view>
-</view>
+</block>
+<button class="moreShopInfo" plain="true" type="primary" bindtap="moreShopInfo">查看更多</button>
