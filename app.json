@@ -1,10 +1,13 @@
 {
   "pages": [
-  "pages/index/index",
+    "pages/index/index",
+    "pages/detail/detail",
     "pages/fujin/fujin",
     "pages/me/me",
     "pages/logs/logs",
-    "pages/detail/detail"
+    "pages/addcomment/addcomment",
+    "pages/test/test"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",

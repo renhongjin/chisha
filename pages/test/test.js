@@ -1,24 +1,30 @@
-// me.js
-var app = getApp()
+// test.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    userInfo:{}
+    height: 20,
+    focus: false
+  },
+  bindButtonTap: function () {
+    this.setData({
+      focus: true
+    })
+  },
+  bindTextAreaBlur: function (e) {
+    console.log(e.detail.value)
+  },
+  bindFormSubmit: function (e) {
+    console.log(e.detail.value.textarea)
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that = this
-      //更新数据
-    that.setData({
-       userInfo: app.globalData.userInfo
-    })
-    console.debug(app.globalData.openId)
+  
   },
 
   /**

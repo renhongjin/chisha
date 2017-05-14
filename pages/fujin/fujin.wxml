@@ -1,7 +1,5 @@
 <!--fujin.wxml-->
-{{centerLatitude}}
-{{centerLongitude}}
-<button  bindtap="open">click</button>
+<button  bindtap="open" plain="true" type="primary">打开地图</button>
 <map 
   id="map" 
   show-location="true" 

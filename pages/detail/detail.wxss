@@ -1,1 +1,88 @@
 /* detail.wxss */
+/*介绍item*/
+.shop-name{
+  text-align: center;
+  font-size: 17pt;
+}
+.shop-item{
+  background-color: white;
+  display: flex;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 2px;
+}
+.shop-item-left{
+  width: 20%;
+}
+.shop-item-right{
+  width: 80%;
+  text-align: right;
+  color: #999999;
+}
+/**小吃描述，小吃评价*/
+.desc-simple{
+  margin-top: 5px;
+  padding-right: 5px;
+  background-color: white;
+}
+.desc-title{
+  display: flex;
+  color:#FF9933;
+  margin-bottom: 3px;
+}
+.label{
+  width: 3px;
+  height: 25px;
+  background-color: #FF9933;
+  margin-right: 4px;
+}
+.desc-simple-content{
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+/*评论*/
+.desc-simple-content-chat{
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+.head{
+  height:36px;
+  width:36px;
+  border-radius:50%;
+}
+.desc-simple-content-top{
+  display: flex;
+  height: 36px;
+  color: #999999;
+}
+.nick-name{
+  margin-left: 8px;
+  margin-top: 2px;
+}
+.chat-image{
+  height:50px;
+  width:50px;
+  margin-right: 3px;
+}
+.chat-simple-info{
+  display: flex;
+  color: #999999;
+}
+.chat-simple-info-time{
+  width: 50%;
+}
+.chat-simple-info-good{
+  width: 25%;
+  text-align: center;
+}
+.chat-simple-info-bad{
+  width: 25%;
+  text-align: center;
+}
+/*评论按钮*/
+.comment-button{
+  position: fixed;
+  z-index: 10;
+  bottom:10px;
+  right:15px;
+}

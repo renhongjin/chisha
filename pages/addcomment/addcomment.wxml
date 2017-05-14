@@ -1,0 +1,23 @@
+<!--addcomment.wxml-->
+<view class="addcomment">
+  <form bindsubmit="bindFormSubmit">
+
+    <view class="comment-content">
+      <textarea name="comment" placeholder="评论内容" maxlength="500"/>
+    </view>
+    <!-- 上传图片 -->
+    <view class="upload-img" bindtap="chooseImage">
+      <image src="/images/comment/add.png" style="width:30px;height:30px;"></image>
+    </view>
+
+    <!--上传图片列表-->
+    <view class="show-photo">
+      <image bindtap="delImag" data-url="{{item}}" wx:key="*this" wx:for="{{urls}}" src="{{item}}" style="width:45px;height:45px;margin-right:3px;"></image>
+    </view>
+
+    
+    <view class="submit-btn">
+      <button formType="submit" plain="true" type="primary">提交</button>
+    </view>
+  </form>
+</view>

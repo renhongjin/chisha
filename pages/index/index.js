@@ -4,8 +4,7 @@ var shops = {
   shopTotalCount:3,
   shopDatas:[
   {
-    id:0,
-    logoUrl:"https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3314349138,2807880508&fm=23&gp=0.jpg",
+    id:0,logoUrl:"https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3314349138,2807880508&fm=23&gp=0.jpg",
     name:"周黑鸭",
     desc:"湖北周黑鸭管理有限公司[1]  是一家专业从事鸭类、鹅类、鸭副产品和素食产品等熟卤制品生产的品牌企业",
     type:"卤菜",

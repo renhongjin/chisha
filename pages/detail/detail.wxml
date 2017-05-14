@@ -1,2 +1,115 @@
 <!--detail.wxml-->
-<text>detail.wxml</text>
+<view class="shop">
+  <view class="shop-name">{{shop.name}}</view>
+  <view class="shop-item">
+    <view class="shop-item-left">
+      <text >地址</text>
+    </view>
+    <view class="shop-item-right" data-address="{{shop.address}}" data-shop-name="{{shop.name}}" bindtap="address">
+      <text >{{shop.address}}</text>
+    </view>
+  </view>
+
+  <view class="shop-item">
+    <view class="shop-item-left">
+      <text >推荐指数</text>
+    </view>
+    <view class="shop-item-right">
+      <block wx:for="{{shop.recommend}}">
+        <image src="/images/detail/star.png" style="width:20px;height:20px;margin-right:2px;"></image>
+      </block>
+    </view>
+  </view>
+
+  <view class="shop-item">
+    <view class="shop-item-left">
+      <text >联系电话</text>
+    </view>
+    <view class="shop-item-right">
+      <text data-phone-num="028-22228888" bindtap="tel">{{shop.phone}}</text>
+    </view>
+  </view>
+
+  <swiper indicator-dots="{{true}}" autoplay="{{false}}" data-imgs="{{shop.imgs}}" bindtap="previewImags">
+  <block wx:for="{{shop.imgs}}">
+    <swiper-item>
+      <image src="{{item}}" style="width:100%"/>
+    </swiper-item>
+  </block>
+</swiper>
+
+<!--小吃简介开始-->
+<view class="desc-simple">
+    <view class="desc-title">
+      <view class="label"></view>
+      <view>
+        <text>小吃简介</text>
+      </view>
+    </view>
+    <view class="desc-simple-content">
+      <text>{{shop.shopDetaiDesc}}</text>
+    </view>
+  </view>
+<!--小吃简介结束-->
+
+<!--评价列表开始-->
+  <view class="desc-simple">
+    <view class="desc-title">
+      <view class="label"></view>
+      <view>
+        <text>评价列表</text>
+      </view>
+    </view>
+    <block wx:for="{{shop.commentList}}" wx:for-item="comment">
+      <view class="desc-simple-content-chat">
+        <view class="desc-simple-content-top">
+          <image class="head" src="{{comment.headUrl}}"></image>
+          <view class="nick-name">{{comment.nickName}}</view>
+        </view>
+        <view class="desc-simple-content-center">
+          <text>{{comment.commentContent}}</text>
+        </view>
+        <view class="desc-simple-content-bottom">
+          <view class="chat-image-list" data-imgs="{{comment.imgs}}" bindtap="previewImags">
+            <block wx:for="{{comment.imgs}}" wx:for-item="imgurl">
+              <image class="chat-image" src="{{imgurl}}"></image>
+            </block>
+          </view>
+          <view class="chat-simple-info">
+            <view class="chat-simple-info-time">
+              {{comment.commentTime}}
+            </view>
+            <view class="chat-simple-info-good" bindtap="good" data-comment-id="{{comment.id}}" data-status="{{comment.status}}">
+              <block wx:if="{{comment.status == 1}}">
+                <image style="margin-right:2px;height:16px;width:16px;" src="/images/detail/good-click.png"></image>
+              </block>
+              <block wx:else>
+                <image style="margin-right:2px;height:16px;width:16px;" src="/images/detail/good.png"></image>
+              </block>
+              
+              <text>{{comment.goodNum}}</text>
+            </view>
+            <view class="chat-simple-info-bad" data-comment-id="{{comment.id}}" data-status="{{comment.status}}" bindtap="bad">
+            <block wx:if="{{comment.status == 0}}">
+              <image style="margin-right:2px;height:16px;width:16px;" src="/images/detail/bad-click.png"></image>
+            </block>
+            <block wx:else>
+              <image style="margin-right:2px;height:16px;width:16px;" src="/images/detail/bad.png"></image>
+            </block>
+              
+              <text>{{comment.badNum}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>    
+<!--评价列表结束-->
+<!--新增评论 -->
+  <view class="comment-button">
+    <image data-shop-id="{{shop.id}}" bindtap="addComment" src="/images/detail/add.png" style="width:30px;height:30px;display:block;margin-bottom:5px;"></image>
+    <!--
+    <image bindtap="feedback" src="/images/detail/feedback.png" style="width:30px;height:30px;display:block;"></image>
+    -->
+  </view>
+</view>

@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<block wx:for="{{shops}}" wx:for-item="shop">
+<block wx:for="{{shops}}" wx:key="*this" wx:for-item="shop">
   <view id="{{shop.id}}" class="item" bindtap="shopDetail">
     <view class="item-top">
       <view class="item-top-left">
