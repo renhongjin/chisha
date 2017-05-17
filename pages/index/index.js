@@ -4,13 +4,33 @@ var shops = {
   shopTotalCount:3,
   shopDatas:[
   {
-    id:0,logoUrl:"https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3314349138,2807880508&fm=23&gp=0.jpg",
+      id: 0, logoUrl:"https://renhongjin.org/zhy.jpg",
     name:"周黑鸭",
-    desc:"湖北周黑鸭管理有限公司[1]  是一家专业从事鸭类、鹅类、鸭副产品和素食产品等熟卤制品生产的品牌企业",
+    desc:"湖北周黑鸭食品工业园有限公司成立于湖北武汉，“会娱乐更快乐”是周黑鸭的品牌理念。努力成为年轻、有活力兼具文化底蕴、生活品味的品牌是周黑鸭的品牌目标。周黑鸭相信，可口、卫生、方便的产品，能够为消费者带来更大的乐趣和更好的体验。",
     type:"卤菜",
     distance:"100m",
-    comment:100,
-    see:110
+    comment:0,
+    see:10
+  },
+  {
+    id: 1,
+    logoUrl: "https://renhongjin.org/zxjp.jpg",
+    name: "正新鸡排",
+    desc: "海正新食品有限公司成立于2006年，是专业从事休闲餐饮连锁店的开发、投资与营运的综合性管理企业。自2000年，公司联合创始人陈传武董事长在浙江温州开设第一家正新食品店。历经16年的飞速发展，我们已建立起完善的新品研发、仓储配送和终端销售体系。",
+    type: "炸鸡排",
+    distance: "100m",
+    comment: 1,
+    see: 9
+  },
+  {
+    id: 2,
+    logoUrl: "https://renhongjin.org/xjgcc.jpg",
+    name: "小郡肝串串",
+    desc: "适宜家庭聚会、朋友聚餐、休闲小憩、随便吃吃",
+    type: "串串香",
+    distance: "100m",
+    comment: 1,
+    see: 9
   }
 ]}
 var mores = {
@@ -18,33 +38,13 @@ var mores = {
   shopDatas: [
     {
       id: 0,
-      logoUrl: "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3314349138,2807880508&fm=23&gp=0.jpg",
-      name: "周黑鸭",
-      desc: "湖北周黑鸭管理有限公司[1]  是一家专业从事鸭类、鹅类、鸭副产品和素食产品等熟卤制品生产的品牌企业",
-      type: "卤菜",
+      logoUrl: "https://renhongjin.org/zxjp.jpg",
+      name: "正新鸡排",
+      desc: "海正新食品有限公司成立于2006年，是专业从事休闲餐饮连锁店的开发、投资与营运的综合性管理企业。自2000年，公司联合创始人陈传武董事长在浙江温州开设第一家正新食品店。历经16年的飞速发展，我们已建立起完善的新品研发、仓储配送和终端销售体系。",
+      type: "炸鸡排",
       distance: "100m",
-      comment: 100,
-      see: 110
-    },
-    {
-      id: 1,
-      logoUrl: "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3314349138,2807880508&fm=23&gp=0.jpg",
-      name: "周黑鸭1",
-      desc: "湖品生产的品牌企业",
-      type: "卤菜",
-      distance: "100m",
-      comment: 100,
-      see: 110
-    },
-    {
-      id: 2,
-      logoUrl: "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3314349138,2807880508&fm=23&gp=0.jpg",
-      name: "周黑鸭2",
-      desc: "湖品生产的品牌企业",
-      type: "卤菜",
-      distance: "100m",
-      comment: 100,
-      see: 110
+      comment: 1,
+      see: 9
     }
   ]
 }
