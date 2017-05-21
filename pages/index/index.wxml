@@ -28,12 +28,12 @@
 
       <view class="item-bottom-simple">
         <image style="width:20px;height:20px;" src="/images/index/chat.png"></image>
-        <text class="simple-desc">{{shop.comment}}</text>
+        <text class="simple-desc">{{shop.commentNum}}</text>
       </view>
 
       <view class="item-bottom-simple">
         <image style="width:20px;height:20px;" src="/images/index/eye.png"></image>
-        <text class="simple-desc">{{shop.see}}</text>
+        <text class="simple-desc">{{shop.seeNum}}</text>
       </view>
     </view>
   </view>

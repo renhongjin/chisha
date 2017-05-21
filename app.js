@@ -66,6 +66,7 @@ App({
   },
   globalData:{
     userInfo:null,
-    openId:null
+    openId:null,
+    domain:'http://localhost:8080/'
   }
 })

@@ -15,7 +15,7 @@
       <text >推荐指数</text>
     </view>
     <view class="shop-item-right">
-      <block wx:for="{{shop.recommend}}">
+      <block wx:for="{{shop.shopInfo.recommend}}">
         <image src="/images/detail/star.png" style="width:20px;height:20px;margin-right:2px;"></image>
       </block>
     </view>
@@ -26,12 +26,12 @@
       <text >联系电话</text>
     </view>
     <view class="shop-item-right">
-      <text data-phone-num="028-22228888" bindtap="tel">{{shop.phone}}</text>
+      <text data-phone-num="{{shop.phone}}" bindtap="tel">{{shop.phone}}</text>
     </view>
   </view>
 
-  <swiper indicator-dots="{{true}}" autoplay="{{false}}" data-imgs="{{shop.imgs}}" bindtap="previewImags">
-  <block wx:for="{{shop.imgs}}">
+  <swiper indicator-dots="{{true}}" autoplay="{{false}}" data-imgs="{{shop.shopInfo.imgs}}" bindtap="previewImags">
+  <block wx:for="{{shop.shopInfo.imgs}}">
     <swiper-item>
       <image src="{{item}}" style="width:100%"/>
     </swiper-item>
@@ -47,7 +47,7 @@
       </view>
     </view>
     <view class="desc-simple-content">
-      <text>{{shop.shopDetaiDesc}}</text>
+      <text>{{shop.shopInfo.shopDetaiDesc}}</text>
     </view>
   </view>
 <!--小吃简介结束-->
@@ -60,14 +60,14 @@
         <text>评价列表</text>
       </view>
     </view>
-    <block wx:for="{{shop.commentList}}" wx:for-item="comment">
+    <block wx:for="{{shop.shopInfo.commentList}}" wx:for-item="comment">
       <view class="desc-simple-content-chat">
         <view class="desc-simple-content-top">
           <image class="head" src="{{comment.headUrl}}"></image>
           <view class="nick-name">{{comment.nickName}}</view>
         </view>
         <view class="desc-simple-content-center">
-          <text>{{comment.commentContent}}</text>
+          <text>{{comment.content}}</text>
         </view>
         <view class="desc-simple-content-bottom">
           <view class="chat-image-list" data-imgs="{{comment.imgs}}" bindtap="previewImags">
