@@ -97,9 +97,11 @@ Page({
     var currentStatus = event.currentTarget.dataset.status
     for (var i = 0; i < commentSize ;i++){
       if (commentList[i].id == commentId){
+        var oldGoodNum = this.data.shop.shopInfo.commentList[i].goodNum
         if (currentStatus == 1){//取消点赞
           this.updateStatus(app.globalData.openId, commentId,-1)
           this.data.shop.shopInfo.commentList[i].status = -1
+          this.data.shop.shopInfo.commentList[i].goodNum = oldGoodNum - 1
           this.setData({
              shop: this.data.shop
           })
@@ -107,6 +109,7 @@ Page({
         this.updateStatus(app.globalData.openId, commentId, 1)
           //点赞
         this.data.shop.shopInfo.commentList[i].status = 1
+        this.data.shop.shopInfo.commentList[i].goodNum = oldGoodNum + 1
           this.setData({
             shop: this.data.shop
           })
@@ -125,10 +128,12 @@ Page({
     var currentStatus = event.currentTarget.dataset.status
     for (var i = 0; i < commentSize; i++) {
       if (commentList[i].id == commentId) {
+        var oldBadNum = this.data.shop.shopInfo.commentList[i].badNum
         if (currentStatus == 0) {//点击取消坏
           //请求后台
           this.updateStatus(app.globalData.openId, commentId, -1)
           this.data.shop.shopInfo.commentList[i].status = -1
+          this.data.shop.shopInfo.commentList[i].badNum = oldBadNum - 1
           this.setData({
             shop: this.data.shop
           })
@@ -137,6 +142,7 @@ Page({
           this.updateStatus(app.globalData.openId, commentId, 0)
           //点坏
           this.data.shop.shopInfo.commentList[i].status = 0
+          this.data.shop.shopInfo.commentList[i].badNum = oldBadNum + 1
           this.setData({
             shop: this.data.shop
           })

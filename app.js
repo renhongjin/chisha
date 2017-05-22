@@ -28,6 +28,20 @@ App({
         wx.getUserInfo({
           success: function (res) {
             that.globalData.userInfo = res.userInfo
+            var requestData = res.userInfo
+            requestData.openId = that.globalData.openId
+            var requestUrl = that.globalData.domain + '/user/add.html'
+            wx.request({
+              url: requestUrl,
+              data: requestData,
+              method: 'POST',
+              header: {
+                'content-type': 'application/json'
+              },
+              success: function (res) {
+                console.debug(res)
+              }
+            })
             typeof cb == "function" && cb(that.globalData.userInfo)
           }
         })
@@ -50,7 +64,6 @@ App({
           } else {
             console.log('获取用户登录态失败！' + res.errMsg)
           }
-
           wx.getUserInfo({
             success: function (res) {
               that.globalData.userInfo = res.userInfo
