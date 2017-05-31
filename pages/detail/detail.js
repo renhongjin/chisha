@@ -108,6 +108,9 @@ Page({
         } else{
         this.updateStatus(app.globalData.openId, commentId, 1)
           //点赞
+        if (this.data.shop.shopInfo.commentList[i].status == 0){
+          this.data.shop.shopInfo.commentList[i].badNum = this.data.shop.shopInfo.commentList[i].badNum - 1
+        }
         this.data.shop.shopInfo.commentList[i].status = 1
         this.data.shop.shopInfo.commentList[i].goodNum = oldGoodNum + 1
           this.setData({
@@ -141,6 +144,9 @@ Page({
           //请求后台
           this.updateStatus(app.globalData.openId, commentId, 0)
           //点坏
+          if (this.data.shop.shopInfo.commentList[i].status == 1) {
+            this.data.shop.shopInfo.commentList[i].goodNum = this.data.shop.shopInfo.commentList[i].goodNum - 1
+          }
           this.data.shop.shopInfo.commentList[i].status = 0
           this.data.shop.shopInfo.commentList[i].badNum = oldBadNum + 1
           this.setData({
