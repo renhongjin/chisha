@@ -7,6 +7,7 @@ Page({
    */
   data: {
     shopId:null,
+    shopInfoId:null,
     urls: []//上传的图片路径
   },
 
@@ -18,11 +19,13 @@ Page({
     console.log(options)
     var shopId = options.shopId
     var openId = app.globalData.openId
+    var shopInfoId = options.shopInfoId
     console.debug('openid' + openId)
     if (!this.isNullOrEmpty(shopId) || !this.isNullOrEmpty(openId)){  
       //没有获取到店铺id
       this.setData({
-        'shopId':shopId
+        'shopId':shopId,
+        'shopInfoId':shopInfoId
       })
     }else{
       console.debug("不存在店铺id,或者openid不能访问评价页面")
@@ -48,10 +51,42 @@ Page({
     var urls = that.data.urls
     //TODO 提交评论content
     //1、获取shopId shopInfoId
+    var shopId = this.data.shopId
+    var shopInfoId = this.data.shopInfoId
     //2、获取用户id
+    var userId = app.globalData.userInfo.userId
     //3、提交评论
+    var requestData = {
+      'content': comment,
+      'urls': urls,
+      'shopId': shopId,
+      'shopInfoId': shopInfoId,
+      'userId': userId
+    }
+    console.debug(requestData)
+    var requestUrl = app.globalData.domain + '/comment/add.html'
+    wx.request({
+      url: requestUrl,
+      method: 'POST',
+      header: {
+        'content-type': 'application/json'
+      },
+      data: requestData,
+      success: function (res) {
+        console.debug(res)
+        var returnData = res.data
+        if (returnData.status == 0) {
+
+        } else {
+          wx.showToast({
+            title: '后台系统异常',
+            icon: 'warn'
+          })
+        }
+      }
+    })
     //4、返回成功之后跳转到店铺详情界面
-    wx.navigateTo({
+    wx.redirectTo({
       url: "/pages/detail/detail?shopId=" + that.data.shopId
     })
   },

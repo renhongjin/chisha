@@ -39,6 +39,11 @@ App({
                 'content-type': 'application/json'
               },
               success: function (res) {
+                var userId = res.data.data.userId
+                that.globalData.userInfo.userId = userId
+                console.debug(res)
+              },
+              fail:function(res){
                 console.debug(res)
               }
             })

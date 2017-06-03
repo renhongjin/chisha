@@ -107,7 +107,7 @@
 <!--评价列表结束-->
 <!--新增评论 -->
   <view class="comment-button">
-    <image data-shop-id="{{shop.id}}" bindtap="addComment" src="/images/detail/add.png" style="width:30px;height:30px;display:block;margin-bottom:5px;"></image>
+    <image data-shop-id="{{shop.id}}" data-shop-info-id="{{shop.shopInfo.id}}" bindtap="addComment" src="/images/detail/add.png" style="width:30px;height:30px;display:block;margin-bottom:5px;"></image>
     <!--
     <image bindtap="feedback" src="/images/detail/feedback.png" style="width:30px;height:30px;display:block;"></image>
     -->

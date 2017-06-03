@@ -162,8 +162,9 @@ Page({
     console.debug("新增评论")
     console.debug(event)
     var shopId = event.currentTarget.dataset.shopId
-    wx.navigateTo({
-      url: "/pages/addcomment/addcomment?shopId=" + shopId
+    var shopInfoId = event.currentTarget.dataset.shopInfoId
+    wx.redirectTo({
+      url: "/pages/addcomment/addcomment?shopId=" + shopId+"&shopInfoId="+shopInfoId
     })
   },
   updateStatus: function (openId, commentId,status){
